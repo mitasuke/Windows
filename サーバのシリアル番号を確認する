@@ -1,0 +1,2 @@
+コマンドプロンプトを起動して以下を実行
+wmic csproduct get identifyingnumber

@@ -1,0 +1,26 @@
+Cドライブが逼迫した時にWindowsUpdateのダウンロードキャッシュファイルと、
+更新履歴などを残しているらしいdbファイルを消したのでメモ。
+
+コマンドプロンプトで実行
+net stop wuauserv
+
+C:\Windows\SoftwareDistribution\Download の中身を全て削除
+C:\Windows\SoftwareDistribution\DataStore の中身を全て削除
+
+コマンドプロンプトで実行
+net start wuauserv
+
+サービスが正常に起動したことを確認
+DataStoreフォルダの中に Logs フォルダとdbファイルが自動生成されていることを確認
+
+
+★あまりにも逼迫するのでWindowsUpdateを動かなくする場合：
+
+コマンドプロンプトで実行
+net stop wuauserv
+
+[スタート] -> [管理ツール] -> [サービス] -> Windows Update を右クリックして [プロパティ]
+　-> スタートアップの種類を 自動(遅延開始) から 手動 にして 適用
+ 
+C:\Windows\SoftwareDistribution\Download の中身を全て削除
+C:\Windows\SoftwareDistribution\DataStore の中身を全て削除

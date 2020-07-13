@@ -1,0 +1,12 @@
+参考
+https://docs.microsoft.com/ja-jp/archive/blogs/jpwsus/wecanstop-wu
+
+[ファイル名を指定して実行] で gpedit.msc を実行
+↓
+ローカルグループポリシーエディタが開く
+↓
+[管理用テンプレート] → [Windows コンポーネント] → [Windows Update]
+↓
+自動更新を構成する をダブルクリック
+↓
+無効 にチェックをつけて 適用 → OK
